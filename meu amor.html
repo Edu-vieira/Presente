@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+    <link rel="icon" href="midias/4096575-heart-like-love_113760.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            margin: 0;
+            background-color: #ffebef;
+            overflow: auto; /* Permite rolar a página inteira */
+        }
+
+        /* Definição de fontes */
+        @font-face {
+            font-family: 'Goudy Old Style SB ExtraBold Italic';
+            src: url('fonts/GoudyOldStyle-SB-ExtraBold-Italic.woff2') format('woff2'),
+                 url('fonts/GoudyOldStyle-SB-ExtraBold-Italic.woff') format('woff');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+            position: relative;
+            z-index: 2;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #d63384;
+            text-align: center;
+        }
+
+        .message {
+            border: 1px solid #d63384;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff0f5;
+            min-height: 50px;
+            color: #333;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        .gallery {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery img {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .gallery img.active {
+            opacity: 1;
+        }
+
+        .contador {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .contador div {
+            width: 30%;
+            height: 100px;
+            background-color: #fff;
+            border: 2px solid #d63384;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            font-family: 'Goudy Old Style SB ExtraBold Italic', serif; /* Aplica a fonte */
+        }
+
+        .contador div span {
+            font-size: 30px;
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        .contador div p {
+            margin-top: 10px;
+            color: #d63384;
+            font-style: italic; /* Aplica itálico nas letras */
+        }
+
+        .date-fixed {
+            font-size: 20px;
+            color: #d63384;
+            margin-top: 10px;
+            font-family: 'Goudy Old Style SB ExtraBold Italic', serif; /* Aplica a fonte */
+        }
+
+        .heart {
+            position: fixed;
+            top: -10px;
+            color: red;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .juntos {
+            font-size: 22px;
+            font-family: 'Goudy Old Style SB ExtraBold Italic', serif; /* Aplica a fonte */
+            color: #d63384;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <audio id="background-music">
+        <source src="midias/Melim - Meu abrigo (Lyric Video Oficial)(M4A_128K).m4a" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    <div class="container">
+        <h1>Eduardo ❤️ Hellen</h1>
+        <div class="gallery">
+            <img src="fotos whats/IMG-20250214-WA0058.jpg" class="active">
+            <img src="fotos whats/IMG-20250214-WA0022.jpg">
+            <img src="fotos whats/IMG-20250212-WA0003.jpg">
+            <img src="fotos whats/IMG-20250214-WA0051.jpg">
+            <img src="fotos whats/IMG-20250213-WA0014.jpg">
+            <img src="fotos whats/IMG-20250330-WA0009.jpg">
+            <img src="fotos whats/IMG-20250214-WA0044.jpg">
+            <img src="fotos whats/IMG-20250126-WA0005.jpg">
+            <img src="fotos whats/IMG-20250214-WA0005.jpg">
+            <img src="fotos whats/IMG-20250214-WA0016.jpg">
+            <img src="fotos whats/IMG-20250401-WA0002.jpg">
+            <img src="fotos whats/IMG-20250214-WA0070.jpg">
+        </div>
+        <div class="message">
+            Meu amor!!! infelizmente o momento da nossa despedida chegou...porém...é nessa despedida que eu queria mais uma vez apenas dizer pra vc o quanto eu te amo e quanto eu sou mais feliz depois que Deus te colocou na minha vida, vivemos muitos momentos até aqui, passamos por várias coisas, várias briguinhas kkkkkk vários carinhos, várias memórias...e aqui nos despedimos...não pra sempre...mas para um dia nos encontrarmos novamente e vivermos tudo aquilo que Deus tem preparado para nós. Na minha vida vc é mais do que especial...vc é meu complemento...eu já n existo mais sem vc...preciso e quero vc comigo pelo resto da minha vida. Eu te amo tanto que...se eu pudesse viver mais de uma vez...a única coisa que eu nunca trocaria seria vc...,que a distância nunca possa nos separar mas apenas aumentar o amor que sentimos um pelo outro, e que essa distância seja tão breve quanto o piscar dos seus lindos olhos...eu te amooo!! 💖
+        </div>
+        <div class="juntos">Estamos juntos à:</div> <!-- Nova frase aqui -->
+        <div class="contador">
+            <div>
+                <span id="anos">0</span>
+                <p>Anos</p>
+            </div>
+            <div>
+                <span id="meses">0</span>
+                <p>Meses</p>
+            </div>
+            <div>
+                <span id="dias">0</span>
+                <p>Dias</p>
+            </div>
+            <div>
+                <span id="horas">0</span>
+                <p>Horas</p>
+            </div>
+            <div>
+                <span id="minutos">0</span>
+                <p>Minutos</p>
+            </div>
+            <div>
+                <span id="segundos">0</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+        <div class="date-fixed">Eu te amo desde: <strong>30/08/2024</strong></div> <!-- Alterei aqui -->
+    </div>
+    <script>
+        let images = document.querySelectorAll('.gallery img');
+        let index = 0;
+        let audio = document.getElementById("background-music");
+
+        // Função para tocar o áudio quando clicar na tela
+        document.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play().catch(error => console.log("Erro ao reproduzir áudio: ", error));
+            }
+        });
+
+        function changeImage() {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }
+
+        function calcularDiasMeses() {
+        const meses = [
+            31, // Janeiro
+            28, // Fevereiro
+            31, // Março
+            30, // Abril
+            31, // Maio
+            30, // Junho
+            31, // Julho
+            31, // Agosto
+            30, // Setembro
+            31, // Outubro
+            30, // Novembro
+            31  // Dezembro
+        ];
+
+        // Função para verificar se é ano bissexto
+        function isBissexto(ano) {
+            return (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
+        }
+
+        let dataInicial = new Date("2024-08-30T00:00:00");
+        let agora = new Date();
+        let diferenca = agora - dataInicial;
+
+        let anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365));
+        let mesesPassados = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 30)); // Conta em meses completos
+        let mesesRestantes = mesesPassados % 12;
+
+        let dias = Math.floor(diferenca / (1000 * 60 * 60 * 24)) % 30;
+
+        // Corrige o número de dias considerando o mês específico
+        let dataInicioMes = new Date(dataInicial.getFullYear(), dataInicial.getMonth(), 1);
+        let diasNoMes = meses[dataInicial.getMonth()];
+
+        // Se for fevereiro em ano bissexto, ajusta para 29 dias
+        if (dataInicial.getMonth() == 1 && isBissexto(dataInicial.getFullYear())) {
+            diasNoMes = 29;
+        }
+
+        // Ajusta os dias no contador de acordo com os meses e dias restantes
+        dias = Math.min(diasNoMes, dias);
+
+        return {
+            anos: anos,
+            meses: mesesRestantes,
+            dias: dias,
+        };
+    }
+        setInterval(changeImage, 3000);
+
+        function atualizarContador() {
+        let contador = calcularDiasMeses();
+        document.getElementById("anos").innerText = contador.anos;
+        document.getElementById("meses").innerText = contador.meses;
+        document.getElementById("dias").innerText = contador.dias;
+        // Continue atualizando horas, minutos e segundos como antes
+        let agora = new Date();
+        let diferenca = agora - new Date("2024-08-30T00:00:00");
+        let horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+        let segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+        document.getElementById("horas").innerText = horas;
+        document.getElementById("minutos").innerText = minutos;
+        document.getElementById("segundos").innerText = segundos;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            heart.style.fontSize = Math.random() * 15 + 10 + "px";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 100);
+    </script>
+</body>
+</html>

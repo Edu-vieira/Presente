@@ -1,0 +1,85 @@
+/* Estilo geral para telas grandes */
+
+body {
+    font-family: "Goudy Old Style", serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centralizando o conteúdo */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o retângulo central */
+.rectangle {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries para diferentes tamanhos de tela */
+
+/* Para dispositivos móveis (até 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .rectangle {
+        padding: 15px;
+    }
+
+    #contador {
+        font-size: 14px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+}
+
+/* Para tablets (de 601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .rectangle {
+        padding: 20px;
+    }
+
+    #contador {
+        font-size: 18px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+}
+
+/* Para telas grandes (desktops) */
+@media (min-width: 1025px) {
+    .container {
+        width: 70%;
+    }
+
+    .rectangle {
+        padding: 30px;
+    }
+
+    #contador {
+        font-size: 20px;
+    }
+
+    .message {
+        font-size: 20px;
+    }
+}
