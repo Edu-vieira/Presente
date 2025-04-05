@@ -90,6 +90,7 @@
             window.location.href = "index1.html";
         });
         function createFloatingHeart() {
+            for (let i = 0; i < 3; i++) { // mais corações por vez
             const heart = document.createElement("div");
             heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🥰";
             heart.classList.add("floating-heart");
@@ -99,7 +100,8 @@
             document.body.appendChild(heart);
             setTimeout(() => heart.remove(), 3000);
         }
-        setInterval(createFloatingHeart, 200);
+        }
+        setInterval(createFloatingHeart, 400);
     </script>
 </body>
 </html>
