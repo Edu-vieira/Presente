@@ -263,76 +263,63 @@
             images[index].classList.add('active');
         }
 
+        
+
         function calcularDiasMeses() {
-        const meses = [
-            31, // Janeiro
-            28, // Fevereiro
-            31, // Março
-            30, // Abril
-            31, // Maio
-            30, // Junho
-            31, // Julho
-            31, // Agosto
-            30, // Setembro
-            31, // Outubro
-            30, // Novembro
-            31  // Dezembro
-        ];
+    const inicio = new Date("2024-08-30T00:00:00");
+    const agora = new Date();
 
-        // Função para verificar se é ano bissexto
-        function isBissexto(ano) {
-            return (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
-        }
-
-        let dataInicial = new Date("2024-08-30T00:00:00");
-        let agora = new Date();
-        let diferenca = agora - dataInicial;
-
-        let anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365));
-        let mesesPassados = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 30)); // Conta em meses completos
-        let mesesRestantes = mesesPassados % 12;
-
-        let dias = Math.floor(diferenca / (1000 * 60 * 60 * 24)) % 30;
-
-        // Corrige o número de dias considerando o mês específico
-        let dataInicioMes = new Date(dataInicial.getFullYear(), dataInicial.getMonth(), 1);
-        let diasNoMes = meses[dataInicial.getMonth()];
-
-        // Se for fevereiro em ano bissexto, ajusta para 29 dias
-        if (dataInicial.getMonth() == 1 && isBissexto(dataInicial.getFullYear())) {
-            diasNoMes = 29;
-        }
-
-        // Ajusta os dias no contador de acordo com os meses e dias restantes
-        dias = Math.min(diasNoMes, dias);
-
-        return {
-            anos: anos,
-            meses: mesesRestantes,
-            dias: dias,
-        };
-    }
-        setInterval(changeImage, 3000);
-
-        function atualizarContador() {
-        let contador = calcularDiasMeses();
-        document.getElementById("anos").innerText = contador.anos;
-        document.getElementById("meses").innerText = contador.meses;
-        document.getElementById("dias").innerText = contador.dias;
-        // Continue atualizando horas, minutos e segundos como antes
-        let agora = new Date();
-        let diferenca = agora - new Date("2024-08-30T00:00:00");
-        let horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
-        let segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-
-        document.getElementById("horas").innerText = horas;
-        document.getElementById("minutos").innerText = minutos;
-        document.getElementById("segundos").innerText = segundos;
+    if (agora < inicio) {
+      return {
+        anos: 0,
+        meses: 0,
+        dias: 0,
+      };
     }
 
-    setInterval(atualizarContador, 1000);
-    atualizarContador();
+    let anos = agora.getFullYear() - inicio.getFullYear();
+    let meses = agora.getMonth() - inicio.getMonth();
+    let dias = agora.getDate() - inicio.getDate();
+
+    if (dias < 0) {
+      meses--;
+      // pegar quantos dias teve o mês anterior
+      const mesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0);
+      dias += mesAnterior.getDate();
+    }
+
+    if (meses < 0) {
+      anos--;
+      meses += 12;
+    }
+
+    return {
+      anos: anos,
+      meses: meses,
+      dias: dias,
+    };
+  }
+
+  function atualizarContador() {
+    let contador = calcularDiasMeses();
+
+    document.getElementById("anos").innerText = contador.anos;
+    document.getElementById("meses").innerText = contador.meses;
+    document.getElementById("dias").innerText = contador.dias;
+
+    let agora = new Date();
+    let diferenca = agora - new Date("2024-08-30T00:00:00");
+    let horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+    let segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+    document.getElementById("horas").innerText = horas;
+    document.getElementById("minutos").innerText = minutos;
+    document.getElementById("segundos").innerText = segundos;
+  }
+
+  setInterval(atualizarContador, 1000);
+  atualizarContador(); // chama uma vez logo ao carregar
 
         function createHeart() {
             let heart = document.createElement("div");
