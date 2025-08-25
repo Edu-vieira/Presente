@@ -5,17 +5,9 @@ body, html {
     background-color: #ffebef;
 }
 
-/*@font-face {
-    font-family: 'Goudy Old Style SB ExtraBold Italic';
-    src: url('fonts/GoudyOldStyle-SB-ExtraBold-Italic.woff2') format('woff2'),
-         url('fonts/GoudyOldStyle-SB-ExtraBold-Italic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;}*/
-
-
 .container {
     width: 80%;
-    max-width: 800px;
+    max-width: 100px;
     padding: 20px;
     background: white;
     border-radius: 15px;
@@ -23,7 +15,7 @@ body, html {
     margin: 50px auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centraliza horizontalmente */
+    align-items: center;
 }
 
 h1 {
@@ -42,26 +34,60 @@ p {
 
 .gallery {
     width: 100%;
-    max-width: 700px;
-    height: 300px;
-    position: relative;
-    margin-top: 20px;
+    max-width: 500px;
+    margin-top: 10px;
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* permite que imagens se ajustem e quebrem linha se necessário */
+    gap: 10px; /* espaçamento entre imagens */
 }
 
 .gallery img {
-    width: auto;
+    width: 100%;
     max-width: 100%;
-    height: 100%;
+    height: auto; /* ajusta altura automaticamente */
     object-fit: contain;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-.gallery img.active {
-    opacity: 1;
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Media queries para telas menores */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .gallery {
+        max-width: 100%;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .gallery {
+        max-width: 90%;
+    }
 }
