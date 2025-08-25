@@ -13,6 +13,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    border-radious: 10px;
 }
 
 /* Estilo para o retângulo central */
@@ -83,3 +84,4 @@ body {
         font-size: 20px;
     }
 }
+
