@@ -1,21 +1,18 @@
+/* --- Ajustes gerais mantidos --- */
 body, html {
     font-family: Arial, sans-serif;
-    height: 100%;
+    height: 70%;
     margin: 0;
     background-color: #ffebef;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px; /* Limite maior para telas grandes */
-    padding: 20px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px gray;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;  
+    border-radius: 15px; 
+    /* box-sizing: border-box;       */
+   
 }
 
 h1 {
@@ -32,37 +29,45 @@ p {
     line-height: 1.5;
 }
 
-/* Galeria principal (slideshow) */
-/* Galeria automática */
+/* --- Galeria principal (slideshow) ajustada --- */
+/* Galeria principal (slideshow) ajustada para se comportar igual ao primeiro código */
 .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 600px; /* tamanho menor */
+    max-width: 600px; /* mesmo tamanho do primeiro código */
     margin: 20px auto;
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 .gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    opacity: 0;
+    max-width: 100%;  /* se ajusta ao container */
+    width: auto;       /* largura automática para manter proporção */
+    height: auto;      /* altura automática */
+    border-radius: 10px; /* mantém bordas arredondadas */
+    display: none;      /* inicialmente invisível */
     transition: opacity 1s;
-    position: relative; /* remove absolute */
 }
 
 .gallery img.active {
+    display: block;    /* apenas a imagem ativa aparece */
     opacity: 1;
 }
 
-/* Media queries para telas menores */
-@media (max-width: 600px) {
+/* Hover (opcional, parecido com primeiro código) */
+.gallery img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+/* Media queries para responsividade */
+/* @media (max-width: 600px) {
     .gallery {
-        max-width: 90%;
+        width: 90%;
     }
 }
 
@@ -70,9 +75,10 @@ p {
     .gallery {
         max-width: 80%;
     }
-}
+} */
 
-/* Galeria interativa */
+
+/* --- Galeria interativa (sem alterações) --- */
 .interactive-gallery {
     display: flex;
     flex-direction: column;
@@ -119,11 +125,11 @@ p {
     margin-top: 20px;
 }
 
-/* Media queries para responsividade */
+/* --- Media queries --- */
 @media (max-width: 600px) {
     .container {
-        width: 95%;
-        padding: 15px;
+        width: 100%;
+        padding: 10px;
     }
 
     p {
@@ -139,6 +145,7 @@ p {
 @media (min-width: 601px) and (max-width: 1024px) {
     .container {
         width: 90%;
+        padding: 15px;
     }
 
     p {
@@ -150,4 +157,3 @@ p {
         height: 60px;
     }
 }
-
