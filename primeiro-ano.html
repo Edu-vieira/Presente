@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso 1° primeiro Ano❤️❤️❤️</title>
+    <link rel="icon" href="midias/4096575-heart-like-love_113760.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            margin: 0;
+            background-color: #ffebef;
+        }
+
+        /*@font-face {
+            font-family: 'Goudy Old Style SB ExtraBold Italic';
+            src: url('fonts/GoudyOldStyle-SB-ExtraBold-Italic.woff2') format('woff2'),
+                 url('fonts/GoudyOldStyle-SB-ExtraBold-Italic.woff') format('woff');
+            font-weight: bold;
+            font-style: italic;
+        }*/
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #d63384;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Goudy Old Style SB ExtraBold Italic', serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 1.5;
+        }
+        /* Galeria automática atualizada */
+        .gallery {
+        position: relative;
+        width: 500px;        /* largura menor, formato vertical */
+        height: 650px;       /* altura maior, vertical */
+        margin: 20px auto;   /* centralizada */
+        border-radius: 10px; /* cantos arredondados */
+        overflow: hidden;
+        box-shadow: 0px 0px 10px gray;
+        }
+
+        .gallery img {
+        width: 100%;         /* ocupa toda a largura */
+        height: 100%;        /* ocupa toda a altura */
+        object-fit: cover;   /* cobre todo o espaço, mantendo proporção */
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s;
+        border-radius: 10px;
+        }
+
+        .gallery img.active {
+        opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>1° Ano ❤️❤️❤️❤️</h1>
+
+        <div class="gallery">
+            <img src="fotos whats/IMG-20250214-WA0058.jpg" class="active">
+            <img src="fotos whats/IMG-20250214-WA0022.jpg">
+            <img src="fotos whats/IMG-003.jpg">
+            <img src="fotos whats/IMG-20250212-WA0003.jpg">
+            <img src="fotos whats/IMG-20250214-WA0051.jpg">
+            <img src="fotos whats/IMG-20250213-WA0014.jpg">
+            <img src="fotos whats/IMG-20250330-WA0009.jpg">
+            <img src="fotos whats/IMG-001 .jpg"> 
+            <img src="fotos whats/IMG-20250214-WA0044.jpg">
+            <img src="fotos whats/IMG-20250126-WA0005.jpg">
+            <img src="fotos whats/IMG-20250214-WA0005.jpg">
+            <img src="fotos whats/IMG-20240923-WA0022.jpg">
+            <img src="fotos whats/IMG-20250214-WA0016.jpg">
+            <img src="fotos whats/IMG-002.jpg">
+            <img src="fotos whats/IMG-20250401-WA0002.jpg">
+            <img src="fotos whats/IMG-20250214-WA0070.jpg">
+            <img src="fotos whats/IMG-20250214-WA0065.jpg">
+            <img src="fotos whats/IMG-20241205-WA0007.jpg">
+            <img src="fotos whats/IMG-20250216-WA0005.jpg">
+            <img src="fotos whats/IMG-20250214-WA0074.jpg">
+            <img src="fotos whats/IMG-20250214-WA0042.jpg">
+            <img src="fotos whats/IMG-20250214-WA0031.jpg">
+        </div>
+        <!-- Container dos corações -->
+        <div id="hearts-container"></div>
+        <style>
+        /* Container fixo para os corações */
+        #hearts-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* não atrapalha cliques */
+        overflow: hidden;
+        z-index: 9999;
+        }
+
+        /* Estilo dos corações */
+        .heart {
+        position: absolute;
+        top: -20px;
+        font-size: 24px;
+        color: red;
+        animation: fall linear forwards;
+        }
+
+        /* Animação de queda */
+        @keyframes fall {
+        to {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+        }
+        }
+        </style>
+
+        <script>
+        function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerText = "❤️";
+        heart.style.left = Math.random() * 100 + "vw"; // posição aleatória
+        heart.style.animationDuration = (Math.random() * 3 + 2) + "s"; // duração aleatória
+        heart.style.fontSize = (Math.random() * 15 + 10) + "px"; // tamanhos variados
+
+        document.getElementById("hearts-container").appendChild(heart);
+
+        // remove o coração depois da animação
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+        }
+
+        // cria um coração a cada 100ms
+        setInterval(createHeart, 100);
+        </script>
+        <p>Eu disse que estava preparando um texto diferente pra vc mvd 🤭🤭, mas em fi...aq vai um textinho um pouco mais grande que o normal meu amor, mas acho que não é um problema né, até pq hoje é mais que especial...❤️<br>Então Hellen Paula Ferreira Martins Sousa, 1 ano em...cara, já tem 1 desde que começamos a namorar, acredita nisso? tempo passa bem rápido né 🥰 1 ano desde que viramos 1 casal, 1 ano desde que a gente começou a se amar, 1 ano desde que as nossas vidas mudaram totalmente por causa um do outro ❤️ e o mais legal é que naquela época a gente nunca imaginava que viveriamos tudo que vivemos até ent, passamos por mt coisa juntos, coisas boas, coisas ruins, coisas felizes, coisas tristes...mas no final disso tudo sempre contunuamos firmes um com o outro, recentemente quase chegamos ao fim, porém...como eu acredito e tenho total certeza disso, foi Deus que te colocou no meu caminho, e por isso tenho a total certeza tbm que esse amor aq vai ser pra sempre 🤍💍 e assim...lógico que ainda virão muitas palavras bonitas a seguir 🤭 mas as principais palavras aq, as que no final são as que verdadeiramente importam...são eu te amo...❤️❤️❤️ eu te amo muito Hellen, sou mt grato por poder te dizer essas palavras, por poder te chamar de "meu amor", grato por poder amar vc, e mais grato ainda 🙏🙏 por ser vc quem eu amo...eu tenho ctz que nunca seria a mesma coisa se fosse com outra pessoa, nunca seria a mesma emoção, o mesmo sentimento, a mesma alegria de te amar, te amar é um grande privilégio que eu tennho, e na mais pura sinceridade, quero continuar tendo ele pro resto da minha vida... eu te amo meu amor ❤️❤️❤️ e isso nunca vai mudar, nossa caminhada com certeza não é fácil, diferente de vários casais nós não temos o privilégio de estar na presença um do outro toda semana, de se ver sempre, de trocar caricias, abraços, beijos, como faziamos no começo do ano 🤭 infelizmente ou felizmente, os planos de Deus pra gente acabaram sendo outros, temos que lidar com a distância e a saudade todos os dias, e acho que a pior parte disso tudo não é viver essa distância e saudes em si, é saber que até podermos estar juntos de verdade novamente vai levar muito tempo, saber que vai demorar até a gente poder descansar nos abraços um do outro, de estar na compahia um do outro diariamente, de viver um ao outro diariamente...isso dói de várias formas, esperar já é algo doloroso, e esperar algo que se deseja com o fundo do coração parece ser mais doloroso ainda...Massss, nós temos uma certeza 😊 certeza que os planos de Deus são perfeitos e nunca falham 🙏 essa certeza em si já um alívio pra mim sabe, com isso eu posso acalmar meu coração, acalmar minha mente, não preciso ficar me preocupando pensando "será que vai dar certo esse tempo todo", "será que vamos conseguir?", esse tipo de pensamento é desnecessário pois foi ele que nos uniu ❤️🥰 foi ele que colocou vc na minha vida 🙏, recentemente andamos passando por uma fase difíl...a mais difícil nesse um ano de namoro...tão difíl a ponto de ter sido quase o nosso fim, e mesmo depois dessa fase extremamente difícil aq estamos nós ❤️🥰 completando 1 ano de Eduardo❤️Hellen, e essa fase difícil que nós passamos minha princesa, pra mim serviu além de aprendizado claro, serviu também pra mostrar que Deus está presente no nosso relacionamento, que é ele que está direcionando nossos passos, que é ele que está conduzindo esse relacionamento 🙏 e isso confirma oque eu disse antes, "esse amor aq é pra sempre" 🤍💍.<br>E com essa certeza de que isso que nós vivemos é para sempre acaba se tornando até animador esperar pelo futuro 😊 esperar pra vivermos nosso sonho 💍 eu te amo muito muito muito muito muito muitão!!!!!!!!!!!!!!!!!!!!!!! minha princesa ❤️❤️❤️❤️❤️❤️❤️, e hj em dia...eu vivo pelo dia em que eu vou escutar "vc aceita Hellen Martins Ferreira Sousa como sua esposa?"🤭, estou muito ansioso por esse dia, sabe pq meu amor? 😁 pq é apartir desse dia que começaremos novamente um marco totalmente novo nas nossas vidas 🙏 e diferente de 1 ano atrás quando nos decidimos amar ao outro sem ter a mínima ideia de que viveriamos isso tudo que nós vivemos, eu consigo ter um vislumbre do quão bom vai sar viver o resto da vida com vc 🤍💍, haverão momentos ruins e tristes também, infelizmente isso faz parte, mas os momentos bons e felizes com certeza serão a maioria, serão os que viveremos mais ❤️🥰❤️🥰 , nós ainda somos jovens meu amor, somos inesperientes, somos imaturos, não sabemos muito sobre o mundo e várias outras coisas ainda, mas uma coisa é certa, nós iremos crescer, nós iremos conseguir tudo isso que eu disse agr, e a melhor parte disso é que vamos fazer isso na compahia um do outro, de que vamos aprender tudo isso tendo o amor um do outro, aprender isso não vai ser fácil, aguns pra serem aprendidos vão causar feridas, vão doer...mas tenho a fé e convicção em Deus de que essas pequenas feridas nunca serão sufucíentes pra fazer esse amor e essa chama apagar 🙏❤️❤️❤️❤️.<br>E bom, vou encerrar por aq por que se eu fosse continuar escrevendo o quão especial vc é pra mim eu ficaria escrevendo até eu me formar 🤭, e é isso meu amor, feliz 1 ano!!!!! ❤️🥰❤️🥰 eu te amo com tudo que tenho, e te amar foi uma das melhores coisas que já me aconteceu ❤️ que os anos dq pra frente sejam rápidos como um relâmpago pra que possamos estar juntos como sonhamos 🤍...eu te amo...🤍💍.</p>
+
+        <!-- Coração animado incorporado -->
+        <div class="center-heart">
+            <p>Eu te amo<br> pra sempre...<br>🤍💍
+            </p>
+        </div>
+
+        <style>
+        /* Coração grande vermelho pulsante */
+        .center-heart {
+            width: 365px;
+            height: 360px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto; /* centralizado horizontalmente com espaçamento */
+            clip-path: path('M 180 90  C 260 -10, 470 145, 180 320 C -110 145 120 -10, 180 90 Z');
+            animation: pulse 1.5s infinite alternate;
+            position: relative;
+        }
+
+        .center-heart p {
+            font-size: 32px; /* tamanho do coração */
+            margin: 0;
+            color: white;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        </style>
+    <p>Agora abaixo está uma pequena reflexão que eu estive fazendo ultimamente sobre o nosso relacionamento meu amor, gostaria de compartilhar ela com vc pois eu acho que é algo de muita importância sabermos sobre isso 🥰🥰🥰</p>
+        <!-- Galeria interativa -->
+    <div class="interactive-gallery">
+        <img src="fotos whats/primeira.jpg" class="main-image">
+        <div class="thumbnails">
+            <img src="fotos whats/primeira.jpg" class="thumb">
+            <img src="fotos whats/segunda.jpg" class="thumb">
+            <img src="fotos whats/terceira.jpg" class="thumb">
+            <img src="fotos whats/quarta.jpg" class="thumb">
+            <img src="fotos whats/quinta.jpg" class="thumb">
+            
+        </div>
+    </div>
+    <!-- Áudio abaixo do link -->
+    <div class="audio-container" style="text-align:center; margin-top:20px;">
+        <audio controls>
+            <source src="midias/Felicidade - Seu Jorge(M4A_128K).m4a" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+    <style>
+    .interactive-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .interactive-gallery .main-image {
+        width: 80%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        transition: opacity 0.5s;
+    }
+
+    .interactive-gallery .thumbnails {
+        display: flex;
+        gap: 10px;
+    }
+
+    .interactive-gallery .thumbnails img {
+        width: 100px;
+        height: 70px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: border 0.3s;
+    }
+
+    .interactive-gallery .thumbnails img:hover {
+        border: 2px solid #d63384;
+    }
+    </style>
+
+    <script>
+    // Trocar a imagem principal quando clicar na miniatura
+    const mainImage = document.querySelector('.interactive-gallery .main-image');
+    const thumbnails = document.querySelectorAll('.interactive-gallery .thumbnails img');
+
+    thumbnails.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            mainImage.src = thumb.src;
+        });
+    });
+    </script>
+    </div>
+    <script>
+        let images = document.querySelectorAll('.gallery img');
+        let index = 0;
+
+        function changeImage() {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }
+
+        setInterval(changeImage, 3000); // troca a cada 3 segundos
+
+        
+    </script>
+</body>
+</html>
