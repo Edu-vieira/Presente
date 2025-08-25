@@ -6,6 +6,7 @@
     <title>Nosso Amor</title>
     <link rel="icon" href="midias/4096575-heart-like-love_113760.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    
     <style>
         body, html {
             font-family: Arial, sans-serif;
@@ -242,6 +243,46 @@
                 <span id="segundos">0</span>
                 <p>Segundos</p>
             </div>
+        </div>      
+        <div class="primeiro-ano-msg">
+            <a href="primeiro-ano.html" target="_blank" rel="external">
+        <!-- Coração animado incorporado -->
+        <div class="center-heart">
+            <p>Felizzz<br> 1 Anoooo!!!!<br>🤍💍
+            </p>
+        </div>
+
+        <style>
+        /* Coração grande vermelho pulsante */
+        .center-heart {
+            width: 365px;
+            height: 360px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto; /* centralizado horizontalmente com espaçamento */
+            clip-path: path('M 180 90  C 260 -10, 470 145, 180 320 C -110 145 120 -10, 180 90 Z');
+            animation: pulse 1.5s infinite alternate;
+            position: relative;
+        }
+
+        .center-heart p {
+            font-size: 32px; /* tamanho do coração */
+            margin: 0;
+            color: white;
+        }
+        .primeiro-ano-msg a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        </style>
+            </a>
         </div>
         <div class="date-fixed">Eu te amo desde: <strong>30/08/2024</strong></div> <!-- Alterei aqui -->
     </div>
@@ -268,60 +309,62 @@
         function calcularDiasMeses() {
             const inicio = new Date("2024-08-30T00:00:00");
             const agora = new Date();
-        
+
             if (agora < inicio) {
-              return {
+            return {
                 anos: 0,
                 meses: 0,
                 dias: 0,
-              };
+            };
             }
-        
+
             let anos = agora.getFullYear() - inicio.getFullYear();
             let meses = agora.getMonth() - inicio.getMonth();
             let dias = agora.getDate() - inicio.getDate();
-        
+
             if (dias < 0) {
-              meses--;
-              // pegar quantos dias teve o mês anterior
-              const mesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0);
-              dias += mesAnterior.getDate();
+            meses--;
+            // pegar quantos dias teve o mês anterior
+            const mesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0);
+            dias += mesAnterior.getDate();
             }
-        
+
             if (meses < 0) {
-              anos--;
-              meses += 12;
+            anos--;
+            meses += 12;
             }
-        
+
             return {
-              anos: anos,
-              meses: meses,
-              dias: dias,
+            anos: anos,
+            meses: meses,
+            dias: dias,
             };
-          }
-        
-          function atualizarContador() {
+        }
+
+        function atualizarContador() {
             let contador = calcularDiasMeses();
-        
+
             document.getElementById("anos").innerText = contador.anos;
             document.getElementById("meses").innerText = contador.meses;
             document.getElementById("dias").innerText = contador.dias;
-        
+
             let agora = new Date();
             let diferenca = agora - new Date("2024-08-30T00:00:00");
             let horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             let minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
             let segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-        
+
             document.getElementById("horas").innerText = horas;
             document.getElementById("minutos").innerText = minutos;
             document.getElementById("segundos").innerText = segundos;
-          }
+        }
 
         setInterval(atualizarContador, 1000);
+        
         atualizarContador(); // chama uma vez logo ao carregar
         
         setInterval(changeImage, 3000);
+        
         function createHeart() {
             let heart = document.createElement("div");
             heart.innerHTML = "❤️";
@@ -343,7 +386,7 @@
             if (msg) {
                 msg.style.display = "none";
             }
-        }, 2000);
+        }, 2000);    
 
     </script>
 </body>
