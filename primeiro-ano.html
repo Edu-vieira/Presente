@@ -288,32 +288,15 @@
         }
 
         setInterval(changeImage, 3000); // troca a cada 3 segundos
-
         
+        setTimeout(() => {
+            const msg = document.getElementById("clique-msg");
+            if (msg) {
+                msg.style.display = "none";
+            }
+        }, 4000);        
     </script>
 </body>
 </html>
-<!-- /* Coração grande vermelho pulsante */
-        .center-heart {
-            width: 365px;
-            height: 360px;
-            background-color: red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 30px auto; /* centralizado horizontalmente com espaçamento */
-            clip-path: path('M 180 90  C 260 -10, 470 145, 180 320 C -110 145 120 -10, 180 90 Z');
-            animation: pulse 1.5s infinite alternate;
-            position: relative;
-        }
 
-        .center-heart p {
-            font-size: 32px; /* tamanho do coração */
-            margin: 0;
-            color: white;
-        }
-
-        @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        } -->
+            
